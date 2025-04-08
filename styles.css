@@ -1,0 +1,119 @@
+/* Color Definitions */
+:root {
+    --light-grey: #dddddd;
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #9b9b9b;
+    --red: red;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+/* Header, Footer, and Navigation Styles */
+header, footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-section {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.navbar-section a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: text-decoration 0.3s ease;
+}
+
+.navbar-section a:hover {
+    text-decoration: underline;
+}
+
+.navbar-section a.selected {
+    background-color: var(--grey);
+    border-radius: 5px;
+    color: var(--red);
+    padding: 0.2rem 0.5rem;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+section {
+    background-color: var(--grey);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Image Styles */
+img {
+    width: 75px;
+    height: 75px;
+}
+
+/* Footer Navigation Styles */
+footer nav ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    position: relative;
+}
+
+.letter-group {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.letter-group span {
+    margin-right: 5px;
+}
+
+input.assigned-letter {
+    width: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input.assigned-letter:focus {
+    background-color: var(--light-grey);
+}
