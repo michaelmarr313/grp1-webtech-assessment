@@ -4,7 +4,7 @@ function updateDecodedMessage() {
     // Convert the scrambled message to lowercase and remove whitespace
 
     const assignedLetters = Array.from(document.querySelectorAll('.assigned-letter')).reduce((acc, input) => {
-        // Target all inputs  with the class assigned-letter
+        // Target all inputs with the class assigned-letter
         const scrambledLetter = input.dataset.letter;
         // Get the input from data-letter attribute
         const assignedLetter = input.value.toLowerCase();
@@ -31,18 +31,12 @@ function updateDecodedMessage() {
 window.addEventListener('DOMContentLoaded', () => {
     const scrambledInput = document.getElementById('customScrambledMessageInput');
     // Get the input field for the scrambled message
-    const container = document.getElementById('assignedLettersContainer'); 
-    // Get the container for assigned letters
 
     scrambledInput.addEventListener('input', updateDecodedMessage);
     // Listen for any changes in the message input field
 
-    container.addEventListener('input', event => {
-        // Check for any input across all assigned-letter inputs
-        if (event.target.classList.contains('assigned-letter')) {
-            // Check if the input is one of the assigned-letter inputs
-            updateDecodedMessage();
-            // Then call the update function to decode the message
-        }
+    document.querySelectorAll('.assigned-letter').forEach(input => {
+        input.addEventListener('input', updateDecodedMessage);
+        // Listen for any changes in the assigned-letter inputs
     });
 });
