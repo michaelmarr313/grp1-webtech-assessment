@@ -117,3 +117,53 @@ input.assigned-letter {
 input.assigned-letter:focus {
     background-color: var(--light-grey);
 }
+
+#caesar_para_1{
+    text-align: left;
+    background-color: black;
+    color: white;
+    width: 750px;
+}
+
+#caesar_para_2{
+    margin-left: 750px;
+    text-align: right;
+    background-color: grey;
+    color: black;
+    width: 730px;
+}
+
+#caesar_para_3{
+    text-align: left;
+    background-color: black;
+    color: maroon;
+    width:750px;
+}
+
+#Caesar_Answer{
+    margin-left:600px;
+}
+
+#puzzle2{
+    background-color: maroon;
+}
+
+#Puzzle2_header{
+    color: black;
+}
+
+#ShiftTool{
+    background-color: maroon;
+    
+}
+
+#PhraseBox{
+    background-color: var(--grey);
+    
+    margin-bottom: 50px;
+}
+
+#ShiftBox{
+    background-color: var(--light-grey);
+    margin-bottom: 50px;
+}
