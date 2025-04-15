@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Puzzle 2</title>
+    </head>
+    <body id="puzzle2">
+        <header class="navbar">
+            <div class="navbar-section">
+                <img src="website_icon.png" alt="Website Icon" class="navbar-icon">
+                <div class="navbar-title">A Murder Mystery</div>
+            </div>
+            <div class="navbar-section">
+                <a href="index.html">The Story</a>
+                <a href="puzzle1.html" >Puzzle 1</a>
+                <a href="puzzle2.html"class="selected">Puzzle 2</a>
+                <a href="puzzle3.html">Puzzle 3</a>
+                <a href="puzzle4.html">Puzzle 4</a>
+                <a href="puzzle5.html">Puzzle 5</a>
+                <a href="tools.html">Tools</a>
+                <a href="suspects.html">Suspects</a>
+            </div>
+        </header>
+        
+        <h1 id="Puzzle2_header">
+            Rome was built in 8 days
+        </h1>
+        
+        <div id="caesar_para_1">
+            <p>in the ruins of forgotten stone, Torches burned low. shadows danced where empires once stood. </p>
+            <p>through arches and alleyways, Murmurs echoed. relics of conquest now sat in dust. </p>
+            <p>in time, all greatness bends. a city, a throne, a dream — brought down by a single Betrayal, then another. </p>
+            <p>and another. Blood on marble, whispers in halls.</p>
+        </div>
+
+        <div id="caesar_para_2">
+            <p>senators did not weep. they schemed. the people did not cheer.</p>
+            <p>they endured. what mattered most was control. a crown passed hand to hand with no consent.</p>
+            <p>one rose with a Promise, then fell under weight he forged. </p>
+            <p>Mercy vanished long before the banners. power shifted silently. none noticed when the gods turned away.</p>
+        </div>
+
+        <div id="caesar_para_3">
+            <p>with each fall, a new mask. Some wore laurels. others, chains.</p>
+            <p>Quiet men with sharp knives shaped history more than armies. Vanity sealed fate, not war.</p>
+            <p>Oaths broke like bone. in dim corners, Names changed. Identities vanished.</p>
+            <p>all paths led here. to silence. to ruin. Truth buried beneath stone. Triumph forgotten beneath ash.</p>
+        </div>
+
+        <div id="Caesar_Answer">
+            <label for="answer">Answer</label>
+            <input id="answer" name="answer" type="text">
+            <input type="submit" value="submit" onclick="answer()">
+            <p>(All word beginnings should be capitilised)</p>
+        </div>
+
+        
+
+        
+
+        <footer>
+            <nav style="text-align: left; color: var(--header-text-color);">
+                <h3>Additional Links</h3>
+                <a href="#">Team Info</a> | 
+                <a href="#">Project Info</a> | 
+                <a href="#">Cheat Sheet</a> | 
+                <a href="#">References</a>
+            </nav>
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+        </footer>
+    </body>
+
+
+    <script>
+        var UserInput = document.getElementById("answer");
+
+        function answer() {
+            if (UserInput.value == "Let The King Fall") {
+                alert("correct");
+            }else{
+                alert("incorrect");
+            };
+        };
+    </script>

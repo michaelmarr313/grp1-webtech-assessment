@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+  <title>Caesar Cipher Decoder</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    input, button {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  }
+  #output {
+  margin-top: 1rem;
+  font-weight: bold;
+  }
+  </style>
+</head>
+<body id="ShiftTool">
+  <header class="navbar">
+    <div class="navbar-section">
+        <img src="website_icon.png" alt="Website Icon" class="navbar-icon">
+        <div class="navbar-title">A Murder Mystery</div>
+    </div>
+    <div class="navbar-section">
+        <a href="index.html">The Story</a>
+        <a href="puzzle1.html" >Puzzle 1</a>
+        <a href="puzzle2.html">Puzzle 2</a>
+        <a href="puzzle3.html">Puzzle 3</a>
+        <a href="puzzle4.html">Puzzle 4</a>
+        <a href="puzzle5.html">Puzzle 5</a>
+        <a href="tools.html" class="selected">Tools</a>
+        <a href="suspects.html">Suspects</a>
+    </div>
+  </header>
+
+  <h2>Caesar Cipher Decoder</h2>
+
+  <div id="PhraseBox">
+  <label for="phrase">Enter Phrase:</label>
+  <input type="text" id="phrase" placeholder="Type your phrase here">
+  </div>
+
+  <div id="ShiftBox">
+  <label for="shift">Enter Shift Amount:</label>
+  <input type="number" id="shift" placeholder="e.g. 3">
+  </div>
+  
+  <button onclick="decode()">Decode</button>
+
+  <div id="output"></div>
+
+  <script>
+
+    // Caesar Cipher function
+    function caesarCipher(str, shift) {
+    var output = "";
+    for (var i = 0; i < str.length; i++) {
+      var ascii = str[i].charCodeAt();
+  
+      if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) {
+       var isUpper = ascii <= 90;
+        ascii += shift;
+  
+        if (isUpper && ascii > 90) {
+           ascii -= 26;
+            } else if (!isUpper && ascii > 122) {
+              ascii -= 26;
+             }
+          }
+  
+          output += String.fromCharCode(ascii);
+        }
+        return output;
+      }
+  
+      // Function to get input values and display result
+      function decode() {
+        var phrase = document.getElementById("phrase").value;
+        var shift = parseInt(document.getElementById("shift").value);
+  
+        if (isNaN(shift)) {
+          document.getElementById("output").textContent = "Please enter a valid number for the shift.";
+          return;
+        }
+  
+        var result = caesarCipher(phrase, shift);
+        document.getElementById("output").textContent = "Decoded Phrase: " + result;
+      }
+
+  </script>
+</body>
+</html>
+
+
